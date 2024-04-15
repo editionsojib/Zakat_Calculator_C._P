@@ -72,5 +72,34 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
-    }
+    }//onCreat End Here ======================================================
+
+
+    // onBackPress Mathord Start Here==========================================
+
+    public void onBackPressed() {
+
+        //super.onBackPressed(); Use Device Function//
+
+        new AlertDialog.Builder(HomeActivity.this)
+                .setTitle("You Want To Exit?")
+                .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        finishAffinity();
+
+                    }
+                })
+                .setCancelable(false)
+                .show();
+    }// onBackPress End Here====================================================
+
+
 }

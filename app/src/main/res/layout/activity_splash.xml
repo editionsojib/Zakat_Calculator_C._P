@@ -5,14 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SplashActivity">
 
 
-
-    <Button
-        android:layout_width="match_parent"
+    <ImageView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spbtn"
-        android:text="next"/>
+        android:src="@drawable/zkakat_image"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="70dp"/>
+
+
+    <include
+        layout="@layout/animation"
+        android:layout_width="167dp"
+        android:layout_height="129dp"
+        android:layout_gravity="center" />
 
 </LinearLayout>

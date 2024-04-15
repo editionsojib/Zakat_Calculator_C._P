@@ -1,10 +1,16 @@
 package com.editions.zakat;
 
+import static android.icu.text.Normalizer.NO;
+
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -18,10 +24,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 public class CalculateActivity extends AppCompatActivity {
 
     EditText NetGold, NetRupa, NetMoney;
     Button AlertBtn, CalculateBtn;
+
+    LottieAnimationView animationView;
 
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
@@ -44,6 +54,7 @@ public class CalculateActivity extends AppCompatActivity {
         NetMoney= findViewById(R.id.ed_NetMONey);
         AlertBtn= findViewById(R.id.AlertBtn);
         CalculateBtn= findViewById(R.id.calculate);
+        animationView= findViewById(R.id.animationView);
         //========================================================================================
 
 
@@ -54,11 +65,30 @@ public class CalculateActivity extends AppCompatActivity {
 
         //=============================================================
 
+
         CalculateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
+
+                // custom Toast Start her ===================================
+                LayoutInflater layoutInflater= getLayoutInflater();
+                View animation= layoutInflater.inflate(R.layout.animation, (ViewGroup) findViewById(R.id.animation_layout));
+
+
+                animation.setBackground(getDrawable(R.drawable.animation_backround));
+
+                Toast toast= new Toast(getApplicationContext());
+                toast.setDuration(Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER_VERTICAL, 0,0);
+                toast.setView(animation);
+                toast.show();
+
+
+                // custom Toast End her ===================================
+
+                // Handler Start Here==================================
 
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -68,6 +98,8 @@ public class CalculateActivity extends AppCompatActivity {
 
                     }
                 },4000);
+
+                // Handler Start Here==================================
 
 
 
@@ -162,7 +194,35 @@ public class CalculateActivity extends AppCompatActivity {
             NetRupa.setText("0");
             NetMoney.setText("0");
         }
-    }//======================================================
+    }//onClick Start Here ======================================================
+
+
+    // onBackPress Mathord Start Here==========================================
+
+    public void onBackPressed() {
+
+        //super.onBackPressed(); Use Device Function//
+
+        new AlertDialog.Builder(CalculateActivity.this)
+                .setTitle("You Want To Exit?")
+                .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        finishAffinity();
+
+                    }
+                })
+                .setCancelable(false)
+                .show();
+    }// onBackPress End Here====================================================
+
 
 
 
