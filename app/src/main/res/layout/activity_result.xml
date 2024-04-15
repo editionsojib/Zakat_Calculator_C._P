@@ -14,11 +14,6 @@
         layout="@layout/tool_bar"
         android:layout_gravity="bottom"/>
 
-    <include
-        layout="@layout/actionbar_menu"
-        android:layout_gravity="bottom"/>
-
-
 
     <TextView
         android:layout_width="match_parent"

@@ -47,13 +47,7 @@ public class CalculateActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_calculate);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.calculate_layout), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
 
         NetGold= findViewById(R.id.ed_NetGold);
@@ -67,7 +61,7 @@ public class CalculateActivity extends AppCompatActivity {
         //ToolBar Event Start Here ====================================================================
 
 
-        calculate_layout= findViewById(R.id.calculate_layout);
+        calculate_layout= findViewById(R.layout.activity_calculate);
 
         ic_home= findViewById(R.id.ic_home);
         ic_about= findViewById(R.id.ic_about);

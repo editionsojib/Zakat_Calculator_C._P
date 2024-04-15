@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".AboutMe"
     android:padding="16dp"
+    android:background="#D7137F"
     >
 
 
@@ -28,6 +29,7 @@
         android:layout_height="wrap_content"
         android:text="About Me:"
         android:textSize="20sp"
+        android:textColor="#000"
         android:layout_below="@id/profile_image"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp" />
@@ -37,8 +39,9 @@
         android:id="@+id/about_me_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=":Sojib Farazi \n\n:App Devloper"
+        android:text="Devloper: Sojib Farazi \n\nAbout App: Zakat Calculator \nCalculat Your Zakat"
         android:textSize="18sp"
+        android:textColor="#000"
         android:layout_below="@id/about_me_text"
         android:layout_marginTop="8dp"
         android:padding="8dp" />
@@ -50,6 +53,7 @@
         android:layout_height="wrap_content"
         android:text="Contact/Address:"
         android:textSize="20sp"
+        android:textColor="#000"
         android:layout_below="@id/about_me_edit"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp" />
@@ -61,6 +65,7 @@
         android:layout_height="wrap_content"
         android:text="Gmail: sojibfara9486@gmail.com"
         android:textSize="18sp"
+        android:textColor="#000"
         android:layout_below="@id/address_text"
         android:layout_marginTop="8dp"
         android:padding="8dp" />

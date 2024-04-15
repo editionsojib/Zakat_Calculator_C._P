@@ -6,10 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CalculateActivity">
+    tools:context=".CalculateActivity"
+    android:background="#ff008d"
+    >
 
     <include
-        layout="@layout/actionbar_menu"
+        layout="@layout/tool_bar"
         android:layout_gravity="bottom"/>
 
 
