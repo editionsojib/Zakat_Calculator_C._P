@@ -8,44 +8,44 @@
     android:orientation="vertical"
     tools:context=".CalculateActivity">
 
-
-
+    <include
+        layout="@layout/actionbar_menu"
+        android:layout_gravity="bottom"/>
 
 
     <Button
         android:id="@+id/AlertBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
         android:background="@drawable/buttons_1"
+        android:contentDescription="@android:string/dialog_alert_title"
+        android:padding="10dp"
         android:shadowColor="#A8A8A8"
         android:text=" হিসাবের নিয়ম জানতে ট্যাব করুন "
-        android:padding="10dp"
-        android:layout_gravity="center"
         android:textColor="#FFFFFFFF"
-        android:textSize="22sp"
-        android:layout_marginTop="50dp"/>
+        android:textSize="22sp" />
 
     <TextView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
+        android:inputType="numberDecimal"
         android:text="মোট স্বর্ণ =(টাকা) লিখুন"
         android:textSize="20dp"
-        android:textStyle="bold"
-        android:inputType="numberDecimal"
-        />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/ed_NetGold"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="টাকায় লিখুন"
-        android:text=""
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        />
+        android:hint="টাকায় লিখুন"
+        android:inputType="numberDecimal"
+        android:text="" />
 
 
     <TextView
@@ -54,20 +54,18 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:text="মোট রুপা =(টাকা) লিখুন"
-        android:textStyle="bold"
         android:textSize="20dp"
-        />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/ed_NetRupa"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="টাকায় লিখুন"
-        android:text=""
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
+        android:hint="টাকায় লিখুন"
         android:inputType="numberDecimal"
-        />
+        android:text="" />
 
     <TextView
         android:layout_width="300dp"
@@ -75,33 +73,32 @@
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
         android:text="অন্যান্য মোট সম্পদ =(টাকা)"
-        android:textStyle="bold"
         android:textSize="20dp"
-        />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/ed_NetMONey"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="টাকায় লিখুন"
-        android:text=""
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
+        android:hint="টাকায় লিখুন"
         android:inputType="numberDecimal"
-        />
+        android:text="" />
 
     <Button
         android:id="@+id/calculate"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
         android:background="@drawable/buttons_1"
+        android:padding="15dp"
         android:shadowColor="#A8A8A8"
         android:text="Calculate"
-        android:padding="15dp"
-        android:layout_gravity="center"
         android:textColor="#FFFFFFFF"
-        android:textSize="22sp"
-        android:layout_marginTop="50dp"/>
+        android:textSize="22sp" />
+
 
 
 

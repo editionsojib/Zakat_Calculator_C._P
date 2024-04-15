@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutMe"
+    android:padding="16dp"
+    >
+
+
+    <!-- Circular Image View -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignBottom="@+id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:background="#DA6541"
+        android:src="@drawable/profile_picture" />
+
+    <!-- About Me TextView -->
+    <TextView
+        android:id="@+id/about_me_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About Me:"
+        android:textSize="20sp"
+        android:layout_below="@id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <!-- About Me EditText -->
+    <TextView
+        android:id="@+id/about_me_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=":Sojib Farazi \n\n:App Devloper"
+        android:textSize="18sp"
+        android:layout_below="@id/about_me_text"
+        android:layout_marginTop="8dp"
+        android:padding="8dp" />
+
+    <!-- Address TextView -->
+    <TextView
+        android:id="@+id/address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact/Address:"
+        android:textSize="20sp"
+        android:layout_below="@id/about_me_edit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <!-- Address EditText -->
+    <TextView
+        android:id="@+id/address_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gmail: sojibfara9486@gmail.com"
+        android:textSize="18sp"
+        android:layout_below="@id/address_text"
+        android:layout_marginTop="8dp"
+        android:padding="8dp" />
+
+
+
+</RelativeLayout>
