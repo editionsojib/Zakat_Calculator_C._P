@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:id="@+id/about_layout"
+    >
 
     <!-- Circular Image View -->
     <ImageView
@@ -32,10 +33,10 @@
         android:id="@+id/about_me_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=":Sojib Farazi \n\n:App Devloper"
+        android:text="Devloper :Sojib Farazi \n\n About App : Zakat Calculator, calculet Your Zakat"
         android:textSize="18sp"
         android:layout_below="@id/about_me_text"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:padding="8dp" />
 
     <!-- Address TextView -->
@@ -57,7 +58,7 @@
         android:text="Gmail: sojibfara9486@gmail.com"
         android:textSize="18sp"
         android:layout_below="@id/address_text"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:padding="8dp" />
 
 </RelativeLayout>

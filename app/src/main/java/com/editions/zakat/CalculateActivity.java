@@ -2,6 +2,7 @@ package com.editions.zakat;
 
 import static android.icu.text.Normalizer.NO;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
@@ -30,6 +33,9 @@ public class CalculateActivity extends AppCompatActivity {
 
     EditText NetGold, NetRupa, NetMoney;
     Button AlertBtn, CalculateBtn;
+    ImageView ic_home, ic_about;
+    LinearLayout calculate_layout;
+
 
     LottieAnimationView animationView;
 
@@ -37,12 +43,13 @@ public class CalculateActivity extends AppCompatActivity {
     SharedPreferences.Editor editor;
 
 
+    @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_calculate);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.calculate_layout), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -55,12 +62,49 @@ public class CalculateActivity extends AppCompatActivity {
         AlertBtn= findViewById(R.id.AlertBtn);
         CalculateBtn= findViewById(R.id.calculate);
         animationView= findViewById(R.id.animationView);
+
+
+        //ToolBar Event Start Here ====================================================================
+
+
+        calculate_layout= findViewById(R.id.calculate_layout);
+
+        ic_home= findViewById(R.id.ic_home);
+        ic_about= findViewById(R.id.ic_about);
+
+
+
+        ic_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(CalculateActivity.this, HomeActivity.class));
+
+            }
+        });
+
+        ic_about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                startActivity(new Intent(CalculateActivity.this, AboutMe.class));
+
+            }
+        });
+
+
+        //====================================================
+
+
+
         //========================================================================================
 
 
         sharedPreferences = getSharedPreferences(""+getString(R.string.app_name), MODE_PRIVATE);
         editor= sharedPreferences.edit();
         //======================================================
+
 
 
         //=============================================================
@@ -189,7 +233,12 @@ public class CalculateActivity extends AppCompatActivity {
 
 
         }else {
-            Toast.makeText(CalculateActivity.this, "Input the number", Toast.LENGTH_SHORT).show();
+            Toast.makeText(CalculateActivity.this, "Input The Real Number", Toast.LENGTH_SHORT).show();
+            NetGold.setError("Input Number");
+            NetRupa.setError("Input Number");
+            NetMoney.setError("Input Number");
+
+
             NetGold.setText("0");
             NetRupa.setText("0");
             NetMoney.setText("0");

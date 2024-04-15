@@ -2,12 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/home_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    android:background="#ff0006"
+    >
 
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/zkakat_image" />
 
     <TextView
         android:id="@+id/textView"
@@ -16,8 +25,10 @@
         android:text="Welcome To Our\n  App"
         android:gravity="center"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
-        android:textSize="30dp"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:background="#373f1a"
         />
 
     <Button
@@ -32,7 +43,7 @@
         android:textColor="#FFFFFFFF"
         android:textSize="25sp"
         android:textStyle="normal"
-        android:layout_marginTop="150dp"/>
+        android:layout_marginTop="50dp"/>
 
     <Button
         android:id="@+id/button2"
@@ -46,7 +57,7 @@
         android:textColor="#FFFFFFFF"
         android:textSize="25sp"
         android:textStyle="normal"
-        android:layout_marginTop="150dp"/>
+        android:layout_marginTop="50dp"/>
 
 
 

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tool_main_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#000"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="5dp"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/tool_sub_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#3F51B5"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home"
+            android:id="@+id/ic_home"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:layout_marginHorizontal="40dp"
+            android:layout_below="@+id/ic_home"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_about"
+            android:layout_toRightOf="@+id/ic_home"
+            android:id="@+id/ic_about"
+            android:layout_marginHorizontal="110dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:layout_toRightOf="@+id/ic_home"
+            android:layout_below="@+id/ic_about"
+            android:layout_marginHorizontal="95dp"/>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
